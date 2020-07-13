@@ -1,3 +1,3 @@
-# imad-app
+# smallpaw-demo
 
-IMAD course application.
+SmallPaw demo application.
