@@ -6,12 +6,20 @@
     </head>
     <body>
         <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
+            <img src="/ui/dog.jpg" class="img-medium"/>
         </div>
         <br>
         <div class="center text-big bold">
-            Hi! I am Mohit Agarwal.
+            Please Login.
         </div>
+        <form method="post" action="/addname">
+            <div>
+                <input type="text" id="username" placeholder="username" name="username">
+                <input type="password" id="password" placeholder="password" name="password">
+                <input type="text" id="email" placeholder="email" name="email">
+                <input type="submit" id="submit_btn" value="Add Name">
+            </div>
+        </form>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>
