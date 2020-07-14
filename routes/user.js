@@ -4,6 +4,8 @@ const { check, validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
+var path = require('path');
+//const process = require('process'); 
 
 const User = require("../model/User");
 //console.log("got all the data will call router.post");
@@ -60,25 +62,7 @@ router.post(
             user.password = await bcrypt.hash(password, salt);
 
             await user.save();
-
-            const payload = {
-                user: {
-                    id: user.id
-                }
-            };
-
-            jwt.sign(
-                payload,
-                "randomString", {
-                    expiresIn: 10000
-                },
-                (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        token
-                    });
-                }
-            );
+            res.status(200).send("New User Created");
         } catch (err) {
             console.log(err.message);
             res.status(500).send("Error in Saving");
@@ -119,25 +103,9 @@ router.post(
         if (!isMatch)
           return res.status(400).json({
             message: "Incorrect Password !"
-          });
-  
-        const payload = {
-          user: {
-            id: user.id
-          }
-        };
-  
-        jwt.sign(
-          payload,
-          "randomString",
-          {
-            expiresIn: 3600
-          },
-          (err, token) => {
-            if (err) throw err;
-            res.status(200).json("Successfully Logged in");
-          }
-        );
+        });
+        res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+        res.status(200).sendFile(path.join(__dirname,'../ui', 'index.html'));
       } catch (e) {
         console.error(e);
         res.status(500).json({

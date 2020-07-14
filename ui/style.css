@@ -3,15 +3,33 @@ body {
     background-color: lightgrey;
     margin-top: 75px;
 }
-
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #1abc9c;
+    color: cadetblue;
+    font-size:150%;
+}
 .center {
     text-align: center;
 }
+.input{
+    width:220px ;
+    height:20px;
+}
+.search {
+    width: 10em;  height: 3em;
+}
 
+.top {
+    text-align: top;
+}
 .text-big {
     font-size: 300%;
 }
-
+.text-medium {
+    font-size: 150%;
+}
 .bold {
     font-weight: bold;
 }

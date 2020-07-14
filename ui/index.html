@@ -5,20 +5,40 @@
         <title>SmallPaw Assignment app</title>
     </head>
     <body>
+        <div class = "header">
+            <h2>
+                List of NGOs for Animal Welfare
+            </h2>
+        </div>
         <div class="center">
-            <img src="/ui/dog.jpeg" class="img-medium"/>
+            <ul>
+                <li class="bold text-medium">
+                    <a href="https://peopleforanimalsindia.org/" target="_blank"><td  width="200"> People For Animals</td></a>
+                </li>
+                <li class="bold text-medium">
+                    <a href="http://sanjaygandhianimalcarecentre.org/" target="_blank"><td  width="200">Sanjay Gandhi Animal Care Centre (SGACC)</td></a>
+                </li>
+                <li class="bold text-medium">
+                    <a href="https://wildlifesos.org/" target="_blank"><td  width="200"> Wildlife SOS India</td></a>
+                </li>
+                <li class="bold text-medium">
+                    <a href="https://circleofanimallovers.org/" target="_blank"><td  width="200">Circle of Animal Lovers</td></a>
+                </li>
+                <li class="bold text-medium">
+                    <a href="http://animalrahat.com/" target="_blank"><td  width="200"> Animal Rahat</td></a>
+                </li>
+                <li class="bold text-medium">
+                    <a href= "https://furryflyers.com/" target="_blank"><td  width="200">Furry Flyers</td></a>
+                </li>
+
+            </ul>
+        </div>    
+
+        <div class="center">
+            <form method = "get" action="/logout">
+                <input type="submit" class="search center" id="submit_btn" value="Logout" >
+            </form>
         </div>
-        <br>
-        <div class="center text-big bold">
-            Please Login.
-        </div>
-        <form method="post" action="/user/login">
-            <div>
-                <input type="text" id="email" placeholder="email" name="email"><br/>
-                <input type="password" id="password" placeholder="password" name="password"><br/>
-                <input type="submit" id="submit_btn" value="Login"><br/>
-            </div>
-        </form>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>

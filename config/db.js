@@ -1,6 +1,5 @@
-//var mongoose = require("mongoose");
 const mongoose = require("mongoose");
-mongoose.Promise = global.Promise;
+
 // Replace this with your MONGOURI.
 const MONGOURI = "mongodb://localhost:27017/test";
 
