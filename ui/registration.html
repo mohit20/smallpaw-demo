@@ -2,21 +2,22 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
-        <title>SmallPaw Assignment app</title>
+        <title>Registration Page</title>
     </head>
     <body>
         <div class="center">
-            <img src="/ui/dog.jpeg" class="img-medium"/>
+            <img src="/ui/dog.jpg" class="img-medium"/>
         </div>
         <br>
         <div class="center text-big bold">
-            Please Login.
+            Please sign up to unlock exciting features.
         </div>
-        <form method="post" action="/user/login">
+        <form method="post" action="/user/signup">
             <div>
+                <input type="text" id="username" placeholder="username" name="username"><br/>
                 <input type="text" id="email" placeholder="email" name="email"><br/>
                 <input type="password" id="password" placeholder="password" name="password"><br/>
-                <input type="submit" id="submit_btn" value="Login"><br/>
+                <input type="submit" id="submit_btn">
             </div>
         </form>
         <script type="text/javascript" src="/ui/main.js">

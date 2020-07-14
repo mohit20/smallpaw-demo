@@ -1,4 +1,4 @@
-console.log("In user.js");
+//console.log("In user.js");
 const express = require("express");
 const { check, validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 
 const User = require("../model/User");
-console.log("got all the data will call router.post");
+//console.log("got all the data will call router.post");
 /**
  * @method - POST
  * @param - /signup
@@ -109,6 +109,7 @@ router.post(
         let user = await User.findOne({
           email
         });
+        req.session.auth = {email: user.email};
         if (!user)
           return res.status(400).json({
             message: "User Not Exist"
